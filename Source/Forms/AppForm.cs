@@ -26,6 +26,8 @@ namespace WindowsVirtualDesktopHelper {
 			App.Instance.MonitorFocusedWindow();
 
 			App.Instance.UIUpdate();
+
+			this.Visible = false;
 		}
 
 		private void AppForm_Shown(object sender, EventArgs e) {
@@ -33,7 +35,7 @@ namespace WindowsVirtualDesktopHelper {
 		}
 
 		private void AppForm_FormClosed(object sender, FormClosedEventArgs e) {
-
+			this.Visible = true;
 		}
 
 		private void AppForm_FormClosing(object sender, FormClosingEventArgs e) {
